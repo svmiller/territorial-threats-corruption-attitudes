@@ -1,5 +1,5 @@
 ---
-title: Economic Threats or Societal Turmoil? Understanding Preferences for Authoritarian Political Systems
+title: "External Territorial Threats and Tolerance of Corruption: A Private/Government Distinction"
 author:
 - name: Steven V. Miller
   affiliation: Clemson University
@@ -22,14 +22,14 @@ fontsize: 11pt
 biblio-style: apsr
 subtitle: Supplemental Appendix
 tables: yes
-anonymous: yes
+anonymous: no
 header-includes:
 - \usepackage{fontawesome}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE, kfigr.prefix=TRUE, kfigr.link=TRUE)
-setwd("~/Dropbox/projects/tolerance-corruption/appendix")
+setwd("~/Dropbox/projects/territorial-threats-corruption-attitudes/appendix")
 library(ordinal)
 library(arm)
 library(car)
@@ -46,9 +46,9 @@ library(stargazer)
 
 ```{r loaddata, eval=TRUE, echo=FALSE, cache=TRUE, message=F, warning=F}
 
-Data_GB <- read_csv("~/Dropbox/projects/tolerance-corruption/analysis/data-gb.csv")
-Data_LB <- read_csv("~/Dropbox/projects/tolerance-corruption/analysis/data-lb.csv")
-Data_WVS <- read_csv("~/Dropbox/projects/tolerance-corruption/analysis/data-wvs.csv")
+Data_GB <- read_csv("../analysis/data-gb.csv")
+Data_LB <- read_csv("../analysis/data-lb.csv")
+Data_WVS <- read_csv("../analysis/data-wvs.csv")
 
 ```
 
