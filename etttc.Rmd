@@ -257,14 +257,6 @@ Finally, I include two additional variables that @goelsaunoris2016mbed found coi
 
 Citizens in one country are going to be more similar to their compatriots than with citizens in other countries.  In short, Argentinians are more like each other than Guatemalans, and so on.  Thus natural nesting of the data, of citizens in countries, violates the assumption of independence of observations built into standard statistical models.  Therefore, I estimate the following models within the mixed effects modeling framework as logistic models. Formally, the estimated equation is
 
-<!-- \begin{eqnarray}
-Pr(y_{i} = 1)  &=& logit^{-1}(\beta^{0} + \beta^{age}*age_{i} + \beta^{female}*female_{i} +  \nonumber \\
-               &&  \beta^{collegeed}*collegeed_{i} + \beta^{unemployed}*unemployed_{i}  +  \nonumber \\
-               && \beta^{personaleconomicsituation}*personaleconomicsituation_{i} + \beta^{trust}*trust_{i} + \nonumber \\
-               && \alpha{j[i]})  \nonumber \\
-\alpha{j[i]}   &=& N()              
-\end{eqnarray} -->
-
 \begin{eqnarray}
 Pr(y_{i} = 1)  &=& logit^{-1}(\beta^{0} + \beta^{microlevel_{ij}}*X^{microlevel_{ij}} +  \nonumber \\
                &=&  \beta^{macrolevel_{j}}*X^{macrolevel_{j}} + \alpha{j[i]})  \nonumber \\
@@ -530,12 +522,6 @@ This manuscript suggests rethinking how scholars gauge individual-level attitude
 
 Beyond promoting a refinement of the extant political science literature on corruption, the analyses presented here have some important implications for the literature on territorial conflict. That individuals tolerate government corruption but condemn private corruption conforms well with the @hutchison2011ttm argument that territorial threat allows governments to mobilize and shape public opinion and behavior in accordance with the government's preferences. Thus, the government is able to communicate to citizens that it needs the necessary liberties in order to work toward national defense and to behave corruptly with respect to other aspects of the budget. This same cue from the government is likely to induce greater political participation, as Hutchison does find, because the government communicates that everyone must do their part in order to achieve the common good. This process then leads individuals to be intolerant of corrupt behavior among themselves that can be seen as undermining that goal.                
 
-<!--
-\include{table1}
-
-\include{table2}
--->
- 
 
 # References
 \setlength{\parindent}{-0.2in}
@@ -543,11 +529,3 @@ Beyond promoting a refinement of the extant political science literature on corr
 \setlength{\parskip}{8pt}
 \vspace*{-0.2in}
 \noindent
-
-
-
-<!-- # Abstract
-
- What makes individuals tolerate government corruption? Can citizens tolerate government corruption but be intolerant of corrupt behavior in society? This manuscript argues that not all attitudes toward corruption are the same. An external territorial threat will elicit a tolerance of government corruption. The more citizens care about their security, the more individuals allow for government corruption as long as national problems are being solved. However, citizens become intolerant of corruption in society. Citizens view this behavior as maximizing individual welfare at the expense of working together for the common good of territorial defense. I draw data from Latinobarometro and Globalbarometer to test these hypotheses. The results from mixed effects models show that citizens in states targeted in territorial disputes are less likely to think corruption is an important problem in the country. They are also more likely to tolerate corruption by the government as long as the problems of the country are being solved. However, they are intolerant of corrupt behavior not involving the national government. 
-
-What makes individuals tolerate government corruption? Can citizens tolerate government corruption but be intolerant of corrupt behavior in society? I argue not all attitudes toward corruption are the same. External territorial threats elicit a tolerance of government corruption since citizens allow for government corruption when they are concerned for their security. However, citizens become intolerant of corruption in society because they view this as maximizing individual welfare at the expense of the common good (i.e. security). Using data from three unique cross-national surveys, I find that citizens under territorial threat are less likely to think corruption is an important problem, are more likely to tolerate government corruption, but are less likely to tolerate corruption by private citizens.-->
