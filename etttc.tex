@@ -1,0 +1,1528 @@
+\documentclass[11pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[sc, osf]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{longtable,booktabs}
+
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\title{External Territorial Threats and Tolerance of Corruption: A
+Private/Government Distinction \thanks{Replication files are available on the author's Github account
+(\href{https://github.com/svmiller}{github.com/svmiller}).
+\textbf{Corresponding author}:
+\href{mailto:svmille@clemson.edu}{\nolinkurl{svmille@clemson.edu}}.}  }
+
+
+
+\author{\Large Steven V. Miller\vspace{0.05in} \newline\normalsize\emph{Clemson University}  }
+
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Steven V. Miller (Clemson University)},
+             pdfkeywords = {territorial conflict, government corruption, private corruption,
+tolerance of corruption},  
+            pdftitle={External Territorial Threats and Tolerance of Corruption: A
+Private/Government Distinction},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\textbf{\authorfont Steven V. Miller} \hskip 15pt \emph{\small Clemson University}   
+
+}
+
+}
+
+
+
+
+
+
+
+
+\begin{abstract}
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+    \vskip 8.5pt % \small 
+
+\noindent What makes individuals tolerate government corruption? Can citizens
+tolerate government corruption but be intolerant of corrupt behavior in
+society? I argue not all attitudes toward corruption are the same.
+External territorial threats elicit a tolerance of government corruption
+since citizens allow for government corruption when they are concerned
+for their security. However, citizens become intolerant of corruption in
+society because they view this as maximizing individual welfare at the
+expense of the common good (i.e.~security). Using data from three unique
+cross-national surveys, I find that citizens under territorial threat
+are less likely to think corruption is an important problem, are more
+likely to tolerate government corruption, but are less likely to
+tolerate corruption by private citizens.
+
+
+\vskip 8.5pt \noindent \emph{Keywords}: territorial conflict, government corruption, private corruption,
+tolerance of corruption \par
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+
+
+\end{abstract}
+
+
+\vskip -8.5pt
+
+
+\noindent  \section{Introduction}\label{introduction}
+
+Government corruption, understood as the misuse of public office for
+private gain, seems inimical to the interests of society. The extent to
+which government actors, especially in nascent democracies, steal state
+resources or allocate resources to those who pay outside legal channels
+represents the extent to which democracy's citizens question the regime
+as a legitimate form of government. The spate of government corruption
+scandals, just in Latin America in the 1990s, underscores the importance
+of corruption as policy issue. In this region alone, nine heads of state
+were forced from office in that decade for using state resources to
+subsidize a lavish private life, reward cronies, or otherwise operate
+outside legal restrictions. When public officials and heads of state use
+their position for personal gain, trust in the democratic experiment
+falters.
+
+Research into government corruption, especially research focused on
+corruption scandals, tends to build in strong assumptions that the
+perception of corruption is equivalent to the intolerance of corruption.
+It is intuitive that these are related. After all, perceiving the
+corruption of Carlos Andrés Pérez in November 1992, who embezzled 250
+million bolivars, led to his removal from the Venezuelan presidency in
+May 1993. It is convenient and easy to assume that behavior perceived as
+corrupt is behavior that warrants punishment.
+
+However, many corrupt governments survive in office. Silvio Berlusconi
+was the longest-serving post-war Prime Minister of Italy despite being
+the subject of a multitude of judicial inquiries and accusations of
+criminal malfeasance for almost the entirety of his first eleven
+non-consecutive years in office. Nursultan Nazarbayev, President of
+Kazakhstan, is one of the most notorious kleptocrats in Central Asia
+(Kramer 2005), but his popular approval is as high as 90 percent in
+polls conducted by foreign firms (Lillis 2010). Can individuals perceive
+government corruption but tolerate its presence? In addition, can
+individuals extend this liberty to government actors to behave corruptly
+but condemn corruption from non-government actors in society?
+
+I propose an answer to both the issue of tolerance of government
+corruption and tolerance of private (non-government) corruption.
+Building from territorial conflict literature, I argue that external
+threats to the state can elicit this individual-level tolerance of
+government corruption. Disputes over territory in the international
+system constitute a threat to the individual citizen, who looks to the
+state leader's government to provide security. When individuals value
+the government providing for their security, they are willing to reduce
+oversight on government behavior elsewhere. This allows state leaders
+and their governments to behave corruptly, which the citizen permits.
+
+However, the same conflict process that draws individuals toward their
+government makes them intolerant of their compatriots who deviate from
+group norms. Deviating from non-sanctioned behavior constitutes a sign
+of weakness that individuals cannot tolerate under threat. Individuals
+in society who take bribes in the course of their duties are seen as
+acting for individual gain at a critical time when the pursuit of the
+common good is necessary. Territorial threat leads individuals to
+tolerate government corruption but leads them to be intolerant of
+corruption in society. My analyses of cross-national survey data from
+Globalbarometer, Latinobarómetro, and World Values Survey affirm these
+expectations.
+
+The paper is divided into the following sections. First, I review the
+literature on corruption, noting its policy concerns and the conflation
+of corruption \emph{perception} as corruption \emph{intolerance}.
+Thereafter, I develop a theory that links territorial threat to
+individual-level tolerance of government corruption and intolerance of
+what I term ``private corruption'' (i.e.~corrupt behavior not involving
+the national government). Thereafter, I test my hypotheses with three
+different cross-national survey data sets, finding support for my
+arguments. My conclusions follow.
+
+\section{Government Corruption: Its Perception and
+Tolerance}\label{government-corruption-its-perception-and-tolerance}
+
+Is corruption, defined as the use of public office for personal gain
+(Williams 1999), even a bad thing for the administration and prosperity
+of a country? Political scientists sang the praises of corruption in
+politics (Huntington 1968; Beck and Maher 1986; Leys 1989) for many
+decades while economists decried that corruption of any kind distorts
+economic outputs (Krueger 1974; Mauro 1995). Only after the Cold War did
+political scientists begin to see corruption as something worse than a
+``necessary evil.'' The more corrosive elements of government corruption
+became apparent when the need to support corrupt governments that were
+anti-communist disappeared. Corruption erodes trust in the government
+and between people as well (Mishler and Rose 2001; Rose-Ackerman 2001;
+Chang and Chu 2006). Citizens who do not trust government institutions
+amid widespread corruption become corrupt themselves (Della Porta 2000;
+Morris and Klesner 2007).
+
+All told, widespread government corruption is trouble for the legitimacy
+of government institutions in nascent democracies. In the fledgling
+democracies of Central Europe and Eastern Europe, corruption decreases
+support for the democratic project and increases support for a return to
+authoritarianism (Rose, Mishler, and Haerpfer 1998). In Latin America,
+widespread government corruption erodes legitimacy for the democratic
+political system (Seligson 2002; Canache and Allison 2005). This makes
+government corruption in developing countries a normative concern for
+those interested in democratic consolidation.
+
+This new concern for the pernicious effects of corruption in developing
+countries had implications for policymakers (Manzetti and Wilson 2007,
+950--51). The end of the Cold War and dissolution of the Soviet Union
+removed any normative justification for Western powers of promoting
+corrupt behavior in third-world governments provided those corrupt
+governments were anti-communist. The abandonment of centrally-planned
+economies in post-Soviet republics and the simultaneous discontinuation
+of import substitution industrialization in South America afforded new
+opportunities for the World Bank and International Monetary Fund to
+promote neoliberalism across the globe. However, the promotion of open
+markets, trade liberalization, and deregulation through the use of
+capital investments came with the concern that recipient governments
+would put these investments to good use. These institutions would no
+longer condone diversion of foreign investments into personal projects
+or bank accounts through conventional government corruption. Toward that
+end, these institutions developed and supported new research agendas on
+corruption that continue to be policy-relevant, including how to measure
+the extent of corruption in a country when the act, by its nature, is
+sub rosa.
+
+The issue of measurement is important, but measuring the extent of
+corruption in a country is difficult and is prone to bias. One of the
+earliest indicators for the extent of corruption looked at the number of
+arrests. This approach argues that that areas with high levels of
+corruption will also have higher arrests on the charge (Schlesinger and
+Meier 2002, for a contemporary example). However, this criminology
+approach to the measurement of corruption also measures \emph{vigilance}
+against corruption and not the \emph{extent} of corruption itself.
+Corrupt regimes may appear spotless for not having enforcement devices
+in place whereas honest regimes may appear corrupt for vigilance against
+minor infractions. To overcome this limitation, corruption research
+measures the extent of corruption by reference to the perception of
+corruption. This is at the heart of Transparency International's
+Corruption Perceptions Index (CPI), which, since 1995, has annually
+measured the extent of corruption in countries across the globe using
+expert assessments and opinion surveys.
+
+This approach, also used by the Political Risk Services firm in its
+International Country Risk Guide, is straightforward. If anyone would
+know about the true extent of corruption in a country, it would be risk
+analysts, international and country business elites, and country
+experts. Even the World Bank's ``Control of Corruption'' indicator draws
+upon these expert opinion surveys, using an unobserved components model
+to create a weighted average that serves an estimate of the ``true''
+level of corruption in a country. While this approach is not without its
+own set of limitations (e.g. Knack 2007; Olken 2009), the measurement of
+corruption as the perception of corruption remains the most common and
+accessible approach for academics and policymakers.
+
+An unintended side effect of the perception approach to the measurement
+of corruption has been the conflation of corruption perception and
+corruption \emph{tolerance} as equivalent. For example, Heidenheimer
+(2002) seems to define the perception of corruption as existing when
+individuals observe behavior by public officials that they believe
+should be punished. Heidenheimer describes a potential corrupt act that
+is decried as corrupt by a single citizen, who also feels the public
+official responsible for the act should be punished. If, however, 99\%
+of the citizen's community disagree with the conscious citizen that the
+act should be punished, then the act is not considered corrupt by the
+community's standards (Heidenheimer 2002, 152). An act not perceived as
+corrupt by the community becomes acceptable per this logic. If the act
+is perceived as corrupt, such as then-U.S. Senator Thomas Dodd's 1967
+use of campaign funds for personal projects in Heidenheimer's example,
+then it also warrants punishment (such as Dodd's censure that year in
+the Senate). The perception approach assumes it is self-evident that
+corruption perception and corruption tolerance are equivalent. Though
+this is intuitive, these are separable concepts. An individual does not
+have to be intolerant of behavior s/he observes as corrupt.
+
+What leads individuals to tolerate government corruption? Pani (2011)
+argues that government corruption leads to a decrease in public
+expenditure and the tax rate, which even non-corrupt and honest citizens
+in developed democracies may find acceptable if it mirrors their
+preference for reduced government spending. Manzetti and Wilson (2007)
+find that support for corrupt governments---i.e.~tolerance of government
+corruption---is more often observed in countries where government
+institutions are weak and patron-client relationships are strong. Thus,
+citizens see material value in its government behaving corruptly
+provided they are in the private goods network. Chang and Kerr (2009)
+build on this idea of clientelism conditioning perceptions and tolerance
+of government corruption. Articulating an insider-outsider theory of
+perceptions and tolerance of corruption, the authors argue that
+patronage network insiders are more likely to accurately perceive
+corruption. They are also more likely to tolerate it. Beyond that, not
+much exists separating perception of government corruption from
+tolerance of government corruption. Tolerance of corruption has been a
+neglected topic in a literature focused on the issue of perception
+(Manzetti and Wilson 2007, 950).
+
+This disparity about what we know of tolerance of government corruption
+becomes more pronounced in available research that uses the standard
+question of the justifiability of bribe-taking. This survey question is
+available in many data sets and is a staple in the World Values Survey.
+It asks respondents to say, on a ten-point scale, how justifiable it
+would be if ``someone accept(ed) a bribe in the course of their
+duties.'' No additional context about the ``someone'' is provided in
+this question, making it more a question of what is an acceptable
+\emph{social} behavior (Katza, Santmana, and Loneroa 1994; Donga,
+Dulleckb, and Torgler 2012) rather than a question of what is an
+acceptable \emph{political} behavior. The respondent's answer to the
+justifiability of bribe-taking is likely conditioned on the belief that
+the questioner is talking about private-private corruption, rather than
+private-public corruption (Argandona 2003).
+
+Private-private corruption, which I label as ``private corruption'' in
+this manuscript, is altogether different from standard ``government
+corruption'' involving a government official's misuse of public funds
+for personal gain (Goel, Budak, and Rajh 2015). Corruption in the
+private case does not involve any public official. The 2003 U.S.
+financial scandal involving Jack Grubman is a notable example of private
+corruption. Jack Grubman, then a stock analyst for Citigroup, upgraded
+AT\&T's stock from ``neutral'' to ``buy'' in a multi-tiered illicit
+exchange, where, in return, AT\&T and Citigroup's CEOs helped place
+Grubman's twin daughters in a prestigious and selective New York
+preschool. A respondent to the ten-point bribe-taking justifiability
+question may be critical of that form of bribe-taking in the private
+sector, but could be ambivalent, or tolerant, of government corruption.
+Much like individuals can perceive corruption in the government and
+tolerate it, citizens can be tolerant of government corruption but
+intolerant of private corruption.
+
+When do citizens tolerate corruption by the government? In addition,
+when do citizens tolerate government corruption while condemning
+corruption at the societal level? In the next section, I propose a
+theory linking external territorial threats with this asymmetry in
+corruption tolerance. I argue that citizens in states under territorial
+threat are likely to tolerate government corruption. This does not
+extend into the realm of private corruption. Citizens are unlikely to
+tolerate private corruption amongst their compatriots in times of threat
+to territory.
+
+\section{Territorial Threat and Varying Tolerance for
+Corruption}\label{territorial-threat-and-varying-tolerance-for-corruption}
+
+My argument linking territorial disputes to tolerance of corruption at
+the individual-level begins with the well-established salient nature of
+this particular type of external threat. The salience of territory
+affects both the general public and the state elites. The general public
+has an emotional investment in territory, creating identities around the
+homeland (Tir 2010; Gibler 2012). State elites, in particular, are
+``soft-wired'' toward aggressive overtures against external rivals over
+the issue of territory, having learned through time and history that
+violence is the best means to securing what is essential to survival and
+prosperity of a society (Vasquez 2009). In modern times, this assumes
+the form of militarization and mobilization of the armed forces in times
+of a territorial crisis. The inclination to respond to territorial
+threats with military overtures makes territorial disputes a first
+``step to war'' (Senese and Vasquez 2003).
+
+This mobilization of the military has important implications beyond the
+maintenance of an adequate balance of power with the territorial rival.
+An abrupt mobilization of the military leads to different levels of
+concern among actors in society. Though a myriad of possible
+socio-economic groups exist within a given state, two broad groups---the
+wealthy elites and general public---are most relevant. The elites
+consist of two subgroups. First, the civilian elites are the small
+subset of society whose assets constitute the nation's overall wealth.
+Second, the military can often be conceptualized as a subset of the
+elite, given the military's proclivity to be bribed into alignment with
+the elite against the general public. By contrast, the general public
+differs from the wealthy elites in both assets and overall proportion of
+a population. The abstraction of society into these two groups is a
+useful foundation for influential arguments on democratization,
+redistribution, and state development (Boix 2003; Acemoglu and Robinson
+2006).
+
+Understanding society as consisting of two relevant groups is important
+because the wealthy elites and general public have different reactions
+to increases in defense spending and military mobilization. Increased
+defense spending by the state leader benefits the wealthy elites. The
+military, as a subset of the wealthy elites, benefits from defense
+spending since it is a direct subsidization of the military's
+livelihood. The civilian elites benefit from increased defense spending
+since a better equipped and mobilized army serves as insurance against
+the demands from the general public for redistributive policies to
+ameliorate the inequality between rich and poor. Defense spending makes
+repression, via the military, cheaper for the civilian elites.
+
+The general public has a different reaction to defense spending, all
+else equal. Resource scarcity dictates that increased defense spending
+comes at the expense of social spending aimed at reducing the inequality
+between rich and poor. This does not discount that national defense is a
+public good that the general public enjoys, but increased spending on
+defense depresses consumption spending on social programs from which the
+general public benefits. Spending on the military above the bare minimum
+necessary to provide for national defense is suboptimal for the general
+public and an issue for concern.
+
+This becomes a monitoring problem for the general public. Concerned with
+what resources are being diverted from social spending, the general
+public prefers to know what is being allocated in order to ensure an
+optimal division of state resources between social spending and other
+government priorities. However, a rapid mobilization in response to
+territorial threat is discretionary. It requires decisions made by the
+state leader about the best possible deployment of the military and
+additional state resources. A threat to territory does not permit time
+for bureaucratic process or red tape that would be seen as hindrances to
+territorial defense. This also means the general public is unaware if
+the decisions made by the state leader about the diversion of state
+resources from social spending, including a diversion of funds toward
+government corruption, are for their detriment.
+
+All else equal, the general public could try to coerce the allocation by
+the state leader closer to its preference through elections or the
+threat of rebellion. However, territorial threat, as a unique kind of
+threat external to the state, leads to compliance from the general
+public. This is the familiary ``rally effect'' where in-group/out-group
+distinctions between states magnifies in an international crisis to the
+benefit of the state leader. In democracies, this ``rally effect'' leads
+to a groundswell of support for the state leader that makes it untenable
+for opposition parties to challenge the state leader's policies during a
+crisis (Miller 2017b). Even in autocratic states, the general public,
+members of whom are likely to rest outside the state leader's private
+goods network (Bueno de Mesquita et al. 2003), may rally around the
+state leader when the expected costs of direct combat over the territory
+proximate to the general public outweigh the expected benefits of
+foreign imposed regime change following a defeat in conflict (Gibler
+2010, 523--24). Thus, the citizen prefers to slacken oversight of the
+state leader's spending decisions when concerns for security are
+paramount (see also: Bueno de Mesquita 2007). The presence of a threat
+to territory induces a ``rally effect'' that makes it unlikely the
+general public will challenge the discretionary decisions made by the
+state leader. This allows the state leader to engage in government
+corruption that the general public would tolerate in times of
+territorial threat. This argument implies two hypotheses.
+
+\begin{hypothesis}
+\begin{minipage}[t]{5.1 in}
+Citizens in states under territorial threat are unlikely to say corruption is the most important problem in their country.
+\end{minipage}
+\end{hypothesis}
+
+\begin{hypothesis}
+\begin{minipage}[t]{5.1 in}
+Citizens in states under territorial threat express a tolerance of government corruption.
+\end{minipage}
+\end{hypothesis}
+
+This tolerance of government corruption does not extend to the rest of
+society. Extant territorial threat scholarship underscores that the
+effect of territorial threat on attitudes toward state leadership is not
+the same as attitudes toward other individuals and society in general.
+This may be a function of the same rally effect that follows territorial
+threat. The rally effect draws individuals toward state leadership,
+through which individuals hope to achieve unity in the face of the
+threat. However, this is not a friction-less process. Hutchison and
+Gibler (2007) make this point when they argue that territorial threat is
+an in-group socializing mechanism. A salient form of threat with a
+higher probability of war onset than other foreign policy issues,
+citizens are justified in fearing the onset of conflict on the homeland.
+In response, individuals cleave together as a show of resolve against
+the source of the territorial threat. Using World Values Survey data,
+the authors argue that allowing self-identified least-liked groups the
+right to demonstrate or the right to run for office is discouraged by
+citizens under conditions of external territorial threat. Allowing
+self-identified least-liked groups these political liberties would be
+seen as introducing weaknesses into the political system at a critical
+time when strength is necessary.
+
+A general intolerance for disreputable behavior among peers extends to
+behavior considered to be corrupt, like taking a bribe. Under conditions
+of territorial threat, citizens can no longer express a willingness to
+``put up with'' a behavior from their compatriots that is considered to
+be objectionable. This echoes the classic definition of intolerance
+offered by Sullivan, Marcus, and Pierson (1979). The implication here is
+two-fold. Bribe-taking among private actors in society is not just
+considered wrong; it is also resisted. As Hutchison (2011) argues,
+conditions of territorial threat allow state elites to mobilize public
+opinion toward the position of the state's elites, leading to a broader
+societal effect where individuals are mobilized by their governments to
+participate among government-sanctioned lines. Individual departures
+from what the government endorses, such as a shopkeeper accepting a
+bribe for a greater quantity of a good that may be rationed by the
+government, is seen as participating in behavior not condoned by the
+government. Citizens interpret such an activity as maximizing individual
+welfare at the expense of working together for the common good.
+
+Though individuals will condone government corruption and loosen
+oversight of government activities when they value their security, they
+are unlikely to afford this same liberty to their fellow citizens. The
+same process that leads individuals to rally toward their government
+under threat, while being intolerant of deviations from group norms in
+society, also leads individuals to permit opportunities for the
+government they will not permit for their fellow citizens in society.
+Under conditions of territorial threat, citizens tolerate government
+corruption but do not tolerate private corruption. This suggests a third
+hypothesis.
+
+\begin{hypothesis}
+\begin{minipage}[t]{5.1 in}
+Citizens in states under territorial threat express an intolerance of private corruption.
+\end{minipage}
+\end{hypothesis}
+
+In the next section, I outline a test of this argument, drawing off a
+unique data source that will permit me the opportunity to test both
+claims.
+
+\section{Research Design}\label{research-design}
+
+I test my argument drawing data from three cross-national survey data
+sets (Globalbarometer, Latinobarómetro, World Values Survey) to estimate
+an individual's tolerance or permissive attitudes toward government and
+private corruption. The first data source, Globalbarometer, represents
+the most careful and systematic comparative survey of attitudes and
+values toward politics. Polling 55 countries between 2003 and 2006, the
+Globalbarometer project eschewed the North American and European focus
+of the World Values Survey in favor of a focus on Africa, Asia, Latin
+America, and the Middle East.
+
+I also use survey data from the 2002 wave of Latinobarómetro. The 2002
+wave of Latinobarómetro is useful, in particular, because the United
+Nations Development Programme (UNDP) and its regional offices in Latin
+America and the Caribbean worked closely with the Chilean cross-national
+polling firm in this survey to gauge individual-level attitudes toward
+authoritarian rule and corruption in seventeen countries in Central
+America and South America (Caputo 2005). The questions about support for
+democracy and attitudes toward corruption in this particular survey wave
+are much more comprehensive than other cross-national survey data sets.
+
+Finally, I draw data from the fourth and fifth waves of the World Values
+Survey project, which polled countries from 1999 to 2008. Whereas
+previous waves of the World Values Survey project oversampled OECD
+countries in North America and Western Europe, later waves have included
+countries from across the globe. The considerable variation in economic
+development, institutional development, and regional threat environment
+for these countries makes newer waves of World Values Survey a more
+representative sample of the rest of the globe than previous waves.
+
+\subsection{Dependent Variables}\label{dependent-variables}
+
+I derive four dependent variables from these three data sets to analyze
+in the following section. The first dependent variable comes from a
+Globalbarometer question that asks the respondent to state what is the
+country's most important national problem using a comprehensive list
+provided by Globalbarometer. Globalbarometer featured 63 options, which
+included security problems like terrorism, health issues like AIDS and
+other endemic diseases, sociodemographic issues like an aging
+population, and various problems associated with a malfunctioning
+government or economy. Corruption was one of the listed problems, which
+eight percent of respondents selected in the survey. I recode this
+variable to equal 1 if the respondent believes corruption is the most
+important problem and 0 if the respondent does not believe corruption is
+the most important problem. If my hypotheses are correct, respondents
+are unlikely to believe corruption is a country's most important problem
+under conditions of territorial threat.
+
+The next two dependent variables come from the 2002 wave of
+Latinobarómetro data, which is unique for its comprehensive questions on
+attitudes toward corruption. One particular question from this wave asks
+the citizen to say whether a certain degree of corruption by the
+government is okay as long as the problems of the country are being
+solved. The individual in the survey then responds that they strongly
+agree, somewhat agree, somewhat disagree, or strongly disagree that a
+level of corruption in the government is permissible, provided national
+problems facing the government and its citizens are being addressed.
+Unlike the standard ten-point justifiability of bribe-taking question,
+this question primes the respondent to think of government corruption
+and not private corruption. I condense this to a dichotomous measure
+that equals a 1 if the respondent thinks a certain degree of corruption
+by the government is okay as long as the problems of the country are
+being solved.
+
+The second dependent variable is the common ten-point justifiability of
+bribe-taking question, which is also available in the Latinobarómetro
+data set. If my theory is correct, a citizen is more likely to tolerate
+corruption by the government under conditions of territorial threat but
+will be intolerant of bribe-taking among the individual's peers in
+society. This is because the bribe-taking question is more of a question
+about acceptable social behavior rather than a metric on tolerance of
+government corruption. I follow a common way of dealing with this
+variable's non-normal distribution (see: Swamy et al. 2001) and condense
+this variable to a dichotomous measure. A value of 0 indicates the
+respondent believes it is never okay to take a bribe. A value of 1
+indicates some tolerance in the survey respondent of taking a bribe.
+
+Descriptive statistics support this distinction at first glance. The
+mean of the dichotomous bribe-taking variable is .166, indicating that
+84\% of respondents believe it is never justifiable to accept a bribe.
+However, the percentage of those answering either ``somewhat agree'' or
+``strongly agree'' to the dependent variable on tolerance of government
+corruption is 60\%. The two measures have a Pearson's R of only -.05,
+which suggests the two dependent variables are indeed analytically
+distinct and refer to different attitudes towards different forms of
+corruption.
+
+Finally, I take the ten-point justifiability of bribe-taking question
+from the World Values Survey and recode it as a dependent variable
+similar to the analyses shown using Latinobarómetro data. Table 1
+provides variable definitions, summary statistics, and data sources for
+the four dependent variables in my analysis.
+
+\begin{longtable}[]{@{}lllc@{}}
+\caption{Variable Definitions, Summary Statistics and Data Sources for
+the Four Dependent Variables}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.10\columnwidth}\raggedright\strut
+\textbf{Model}\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright\strut
+\textbf{Variable}\strut
+\end{minipage} & \begin{minipage}[b]{0.37\columnwidth}\raggedright\strut
+\textbf{Description {[}N; mean; std. dev.{]}}\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\centering\strut
+\textbf{Source}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.10\columnwidth}\raggedright\strut
+\textbf{Model}\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright\strut
+\textbf{Variable}\strut
+\end{minipage} & \begin{minipage}[b]{0.37\columnwidth}\raggedright\strut
+\textbf{Description {[}N; mean; std. dev.{]}}\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\centering\strut
+\textbf{Source}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+Model 1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\emph{Corruption is Most Important Problem}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+Codes a 1 if respondent thinks corruption is the country's most
+important problem, 0 if some other listed problem is most important
+{[}48,040; .075; .263{]}.\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\centering\strut
+Globalbarometer (GB)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+Model 2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\emph{Tolerance of Government Corruption}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+Codes a 1 if respondent thinks a certain degree of corruption by the
+government is okay as long as the problems of the country are being
+solved, 0 if not okay. {[}16,679; .166; .372{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\centering\strut
+Latinobarómetro (LB)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+Model 3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\emph{Tolerance of Private Corruption}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+Codes a 1 if respondent thinks someone accepting a bribe is in any way
+justifiable, 0 if it's never justifiable. {[}16,679; .591; .492{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\centering\strut
+Latinobarómetro (LB)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+Model 4\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\emph{Tolerance of Private Corruption}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+Codes a 1 if respondent thinks someone accepting a bribe is in any way
+justifiable, 0 if it's never justifiable. {[}98,246; .238, .426
+{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\centering\strut
+World Values Survey (WVS)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Measuring Territorial
+Threat}\label{measuring-territorial-threat}
+
+I get my measure of territorial threat is taken from the Correlates of
+War Militarized Interstate Dispute (COW-MID) data set (Palmer et al.
+2015; Gibler, Miller, and Little 2016). Defined as either a threat,
+display or use of force, militarized interstate disputes provide a great
+measure for the presence of external threat in a country. Militarized
+interstate disputes (MIDs) are diverse, encompassing a variety of
+actions and stem from a variety of issues.
+
+For every country in each of these three data sources, I look through
+the MID history in the five years prior to the survey year. I
+disaggregate the type of MID into four categories based on whether the
+MID was over the distribution of territory or some other issue and
+whether the country initiated the MID or was targeted by another state.
+To assess whether the dispute was over territory, I consult the the MID
+3.0 and MID 4.0 narratives file maintained by the Correlates of War
+project as well as the \emph{revtype} variables provided in the data
+set. In all cases, whether the dispute was over territory or some other
+issue was clear.
+
+After separating the MIDs by type (non-territorial and territorial), I
+further delineate MIDs in which the state in question was the clear
+initiator or MIDs in which the state in question was the clear target.
+As more recent scholarship on territorial conflict suggests, the
+conflict process for initiators is not equivalent to the conflict
+process for targets (Tir 2010; Miller 2013). Tolerance of government
+corruption and intolerance of private corruption are expected for those
+citizens who are in states that are the targets of territorial threat.
+Determining initiators and targets of MIDs was done through consulting
+the \emph{revstate} and \emph{sidea} variables maintained by the COW-MID
+data set and reading through the accompanying narratives maintained by
+the Correlates of War project. Following Hutchison and Gibler (2007), I
+code a case where there was no clear initiator as a case where each side
+involved was targeted.
+
+The predictor variables drawn from the MID data represent the presence
+or absence of a particular MID type in the five years prior to the
+survey year.
+
+\subsection{Control Variables}\label{control-variables}
+
+I employ several control variables from a review of the corruption
+literature. I took care to isolate variables that explain
+individual-level perception or tolerance of corruption, rather than
+variables that explain the observation of corruption at the societal
+level without clear implications for the dependent variables of
+interest. Table 2 provides variable definitions and data sources for
+these variables at both the micro-level and macro-level. The appendix
+contains descriptive statistics (i.e.~means, standard deviations) for
+each of these variables by cross-national survey data set and analysis.
+
+\begin{longtable}[]{@{}llc@{}}
+\caption{Variable Definitions and Data Sources}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
+\textbf{Variable}\strut
+\end{minipage} & \begin{minipage}[b]{0.46\columnwidth}\raggedright\strut
+\textbf{Description}\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\centering\strut
+\textbf{Source}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
+\textbf{Variable}\strut
+\end{minipage} & \begin{minipage}[b]{0.46\columnwidth}\raggedright\strut
+\textbf{Description}\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\centering\strut
+\textbf{Source}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Age}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Age of respondent in years\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+GB, LB, WVS\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Female}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy for if respondent self-identifies as female\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+GB, LB, WVS\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{College Educated}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy for if respondent says s/he has a college diploma\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+GB, LB, WVS\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Unemployed}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy for if respondent is currently unemployed\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+GB, LB, WVS\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Personal Economic Situation}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Overall socioeconomic situation of the respondent. GB: respondent's
+personal economic situation (5-item). LB: respondent's socioeconomic
+class (5-item). WVS: respondent's financial satisfaction
+(10-item).\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+GB, LB, WVS\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Trust Most People}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy for if respondent believes most people can be trusted, 0 if ``can
+never be too sure.''\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+GB, LB, WVS\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Targeted Territorial MID}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy if country was targeted in a territorial MID in five years before
+survey.\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Palmer et al. (2015)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Initiated Territorial MID}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy if country initiated a territorial MID in five years before
+survey.\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Palmer et al. (2015)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Targeted Non-Territorial MID}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy if country was targeted in a non-territorial MID in five years
+before survey.\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Palmer et al. (2015)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Initiated Non-Territorial MID}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Dummy if country initiated a non-territorial MID in five years before
+survey.\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Palmer et al. (2015)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Economic Threat Index}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Interval-level estimate of a country's latent economic ``threat'' from
+indicators of GDP per capita, GDP contraction, unemployment, and
+consumer price index (c.f. Miller 2017a)\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+World Bank\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{State Fragility Index}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Index based on legitimacy and effectiveness on four dimensions:
+economic, political, security, and social.\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Marshall and Elzinga-Marshall (2017)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Level of Democracy}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Graded response model of ``latent'' level of democracy\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Pemstein, Meserve, and Melton (2010)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{\% of Parliament Held by Women}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Percent of seats in the country's parliament held by women\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Inter-Parliamentary Union\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Ethnic Fractionalization}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Probability two randomly selected individuals in a country would belong
+to different ethnic groups\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+Wimmer, Cederman, and Min (2009)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\emph{Government Expenditure (\% of GDP)}\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+Government current consumption expenditures, exluding the military (as
+\% of GDP)\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
+World Bank\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsubsection{Micro-level}\label{micro-level}
+
+Scholarship on perception and tolerance toward corruption do not specify
+elaborate models at the micro-level though demographic variables are
+easy to include. Gatti, Paternostro, and Rigolini (2003) find several
+demographic variables that are associated with aversion to corruption.
+Older citizens are more averse to corruption than younger citizens. I
+include the interval age measure from in three of the four models.
+
+Swamy et al. (2001) has a well-traveled argument that women are more
+averse to corruption, for which I estimate with a dummy variable if the
+respondent self-identifies as a woman. Education generally correlates
+negatively with tolerance of corrupt behavior. To test this, I include a
+dummy variable that equals 1 if the respondent says s/he has completed a
+college education. Those who hold jobs are more likely to be averse to
+corruption, suggesting that becoming unemployed is a contextual effect
+that would lead individuals to tolerate corruption. I code respondents
+who list their employment status as temporarily being without work as
+unemployed.
+
+Wealthier citizens whose personal economic situation is more secure are
+less inclined to tolerate corruption. However, a direct measure that is
+consistent across multiple cross-national public opinion data sets is
+simply unavailable. Different survey data sets will ask about a
+respondent's personal economic situation in different ways, which leads
+to different measures of a respondent's personal economic situation
+across the different data sets in my analysis. In the first model using
+Globalbarometer data, I use a five-point ordinal measure of an
+individual's evaluation of their own economic situation. Those who
+respond with ``so so'' are the baseline. This recoded variable ranges
+from 2 to -2, where a 2 is a response of ``very good'' and a -2 is a
+response of ``very bad''. The Latinobarómetro analyses uses an almost
+identical five-point ordinal measure that I recode in a similar manner.
+The World Values Survey analysis uses the ten-point financial
+satisfaction variable with higher values indicating an individual's
+greater satisfaction with his or her financial situation.
+
+Finally, I include a variable relevant to the literature on trust and
+corruption. Lack of trust can foster corrupt behavior (which would be
+viewed as tolerable) while corrupt behavior can also erode trust. The
+variable included is whether the respondent believes most people can be
+trusted.
+
+\subsubsection{Macro-level}\label{macro-level}
+
+I also include several country-level predictors as well. We know that
+democratic countries are less likely to be corrupt relative to other
+regime types. The built-in assumption ehere is democracies empower
+citizens to identify and punish instances of corruption, both in
+government and society. I include two variables relevant to this
+argument. First, I incorporate the Unified Democracies Score (UDS)
+democracy estimate for each country in the year prior to the survey year
+(Pemstein, Meserve, and Melton 2010). In addition, I also test the
+corollary assumption that democracies are less likely to have corruption
+because they have mobilized and free press corps that can identify and
+punish instances of corruption (Brunetti and Weder 2003). Therefore, I
+include Freedom of the Press data from Freedom House for each country in
+the survey year. I invert this variable, such that higher values
+indicate more, not less, press freedom.
+
+I also control for the general macroeconomic situation and domestic
+security of the state. My economic threat index consists of four
+macroeconomic indicators: national unemployment rates, the consumer
+price index, real GDP per capita, and real GDP per capita change in the
+five years prior to the survey year (c.f. Miller 2017a), for which data
+come from the World Bank. All four variables are standardized and
+appropriately scaled, such that higher values in the index coincide with
+worsening economic conditions. My societal threat indicator is the state
+fragility index (Marshall and Elzinga-Marshall 2017), which Goel and
+Saunoris (2016) found is positively associated with country-level
+corruption. The state fragility index measures the legitimacy and
+effectiveness of a state on four dimensions (economic, political,
+security, and social). Higher values indicate more fragility.
+
+I test the findings from Swamy et al. (2001), who demonstrate that
+greater parliamentary representation for women reduces corruption in the
+country. The assumption is that the more women are involved in the
+national government, the more they are able to foster intolerance toward
+corruption among the citizenry. The data come from the
+Inter-Parliamentary Union.
+
+Finally, I include two additional variables that Goel and Saunoris
+(2016) found coincide with corruption at the country-level. I include
+the general government current consumption expenditures (excluding the
+military) as a percentage of GDP as it appears in the World Bank data.
+This measure of government involvement in the economy generally
+coincides with decreasing corruption at the state-level in the Goel and
+Saunoris (2016) analysis. Likewise, I include the ethnic
+fractionalization measure as it appears in the Ethnic Power Relations
+data set (Wimmer, Cederman, and Min 2009). Formally, this measure is the
+probability that two randomly selected individuals from a state will
+belong to different ethnic groups.
+
+\subsection{Model Choice and Notes}\label{model-choice-and-notes}
+
+Citizens in one country are going to be more similar to their
+compatriots than with citizens in other countries. In short,
+Argentinians are more like each other than Guatemalans, and so on. Thus
+natural nesting of the data, of citizens in countries, violates the
+assumption of independence of observations built into standard
+statistical models. Therefore, I estimate the following models within
+the mixed effects modeling framework as logistic models. Formally, the
+estimated equation is
+
+\begin{eqnarray}
+Pr(y_{i} = 1)  &=& logit^{-1}(\beta^{0} + \beta^{microlevel_{ij}}*X^{microlevel_{ij}} +  \nonumber \\
+               &=&  \beta^{macrolevel_{j}}*X^{macrolevel_{j}} + \alpha{j[i]})  \nonumber \\
+\alpha{j[i]}   &=& N(0, \sigma^{2}_{j})              
+\end{eqnarray}
+
+where individuals (\emph{i}) are nested within countries (\emph{j}),
+\emph{microlevel} refers to the matrix of covariates and the associated
+betas of the micro-level controls from the survey data,
+\emph{macrolevel} refers to the matrix of covariates and the associated
+betas of the macro-level variables that serve as contextual influences
+of these individual attitudes, and the random effects are normally
+distributed with a mean of zero and a variance to be estimated from the
+data.
+
+Finally, I scale all non-binary inputs by two standard deviations to
+provide a rough comparability of estimates in the following models (see:
+Gelman 2008).
+
+\section{Results}\label{results}
+
+Figure 1 is a dot-and-whisker plot that summarizes the results of of my
+analyses of Globalbarometer (GB), Latinobarómetro (LB), and World Values
+Survey (WVS) data. I discuss the results below, starting with the
+results of the micro-level predictors.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{etttc_files/figure-latex/reggraph-1.pdf}
+\caption{Mixed Effects Models of Attitudes About Corruption}
+\end{figure}
+
+None of the micro-level control variables had consistent effects across
+all four models. For example, college-educated respondents were more
+likely than those who did not attain a college degree to say corruption
+is the country's most important problem and are less likely to view
+bribe-taking as justifiable in any way. However, college-educated
+respondents were more likely to tolerate government corruption provided
+the country's problems were being solved. Older respondents were less
+likely to think corruption is the country's most important problem and
+were less likely to think bribe-taking is justifiable. However, they are
+more tolerant of government corruption in Model 2. Those who believe
+most people can be trusted are less likely to tolerate government
+corruption but were more likely to think taking a bribe is justifiable.
+The variables for personal economic situation were positive and
+significant in Model 1 and Model 2 but Model 3 and Model 4 suggest there
+is no difference in attitudes about the justifiability of taking a bribe
+for those whose personal economic situation is better/more secure
+relative to those whose personal economic situation is not as good or
+secure.
+
+The macro-level predictors also yield some interesting results. It is
+unsurprising that a respondent in the Globalbarometer sample is unlikely
+to think of corruption as the country's most important problem when the
+country is under considerable economic duress. The respondent is more
+likely to select a problem from Globalbarometer's list that deals with
+the economy (e.g. ``economics'' or ``poverty''). However, there was no
+statistically significant effect of economic threat on questions
+pertaining to corruption tolerance in two of the other three models. The
+results for the effect of state fragility index in Model 2 and Model 3
+are interesting. Citizens in more fragile Latin American states were
+less likely to tolerate government corruption but more likely to
+tolerate private corruption.
+
+The results for the other macro-level predictors were not as consistent
+across the four models. Higher government expenditure as a percentage of
+GDP and increasing democracy lead citizens to be less likely to tolerate
+government corruption in Model 2 and makes them less likely to tolerate
+private corruption in Model 4. There were no discernible effects in
+Model 1 and Model 3. Ethnic fractionalization increases the likelihood
+of a citizen tolerating government corruption in Model 2. There is
+interestingly little support for the Swamy et al. (2001) hypothesis
+about women and corruption at the macro-level. Greater parliamentary
+representation for women leads to a decrease in the likelihood of
+tolerating government corruption but it leads to an increase in the
+justifiability of taking a bribe in Model 4. There were no discernible
+effects of parliamentary representation for women in Model 1 and Model
+3.
+
+However, the variables of interest are the threat variables. I
+hypothesize that external threat to territory, as captured by the
+presence of targeted territorial dispute in the five years prior to the
+survey year, leads citizens to be permissive or tolerant of government
+corruption but intolerant of private corruption. Model 1 provides some
+prima facie evidence for this. Respondents in states that were targeted
+by a militarized threat to revise the state's territorial status quo
+were unlikely to see corruption as the country's most important problem.
+Consistent with my argument, the salient nature of territorial threat
+shifts focus of national problems from corrupt behavior toward national
+security. The result for the territorial threat variable from Model 2
+builds on the finding from Model 1. Citizens in Latin America under
+territorial threat, such as those in Ecuador, Peru, and Central American
+states like Nicaragua involved in the Gulf of Fonseca dispute, are more
+likely to tolerate government corruption. However, Model 3 shows that
+those same citizens who tolerate government corruption are unlikely to
+tolerate private corruption. The coefficient for the targeted
+territorial MID variable that was positive and statistically significant
+in Model 2 is negative and statistically significant in Model 3. The
+findings from Model 3 regarding the effect of territorial threat on
+tolerance toward private corruption are supported in Model 4 using World
+Values Survey data. Being targeted in a territorial dispute is unique
+among the conflict indicators for producing this asymmetry in attitudes
+toward the tolerance of corruption.
+
+After estimating the four models in Figure 1, I generated first
+differences in predicted probabilities as quantities of interest (see
+King, Tomz, and Wittenberg 2000). The quantities provided in Figure 2
+are first differences in the predicted probabilities of a value of
+\emph{y} in an increase from 0 to 1 in the targeted territorial MID
+variable. All other values in these simulations are held at the typical
+value.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{etttc_files/figure-latex/sims-1.pdf}
+\caption{Simulated Quantities of Interest From the Regression Models}
+\end{figure}
+
+The first difference in the predicted probability of a respondent in the
+Globalbarometer sample labeling corruption as the country's most
+important problem is -.033. Whereas the predicted probability of naming
+corruption as the country's most important problem is .071 in the
+absence of a territorial threat, a first difference of -.033 corresponds
+with over a negative 53\% change in the predicted probability.
+Consistent with my argument, the presence of an external territorial
+threat leads citizens to value their security over monitoring the
+government's activities for corrupt behavior.
+
+The first difference in the simulated predicted probability of a
+respondent tolerating government corruption in the Latinobarómetro
+analysis is .103. Whereas the simulated probability of tolerating
+government corruption provided the country's problems were being solved
+was .59 in the data, this increase of .103 coincides with a 17.5\%
+change in the predicted probability.
+
+The effects are substantively large in Model 3 and Model 4 as well. The
+first difference in the Latinobarómetro analysis on the justifiability
+of taking a bribe was -.120, which constitutes a negative 54\% change in
+the probability of thinking a bribe is justifiable when the citizen's
+state is under territorial threat. In the fourth model using World
+Values Survey data, this percentage change for a first difference of
+-.107 is negative 35\%. All told, Figure 2 provides quantities of
+interest underscoring the effect of territorial threat on attitudes
+toward corruption observed in Figure 1.
+
+\section{Conclusion}\label{conclusion}
+
+This manuscript started with two interesting questions that often go
+unasked in the corruption literature. First, when do citizens tolerate
+corruption by their national government? Though kleptocracy, graft, and
+other common forms of corrupt behavior seem inimical to individual and
+societal welfare and are often punished upon the perception of these
+activities being present, the perception of corruption and the
+\emph{tolerance} of corruption are separate concepts. Second, can the
+same behavior that is condemned as corrupt in society be condonable
+behavior for government officials? In short, can individuals tolerate
+government corruption but condemn private corruption?
+
+Answers proposed in this manuscript draw attention to the regional
+threat environment. Citizens under a salient, external threat, like a
+territorial threat, will condone government corruption. Citizens who
+value their security are likely to loosen oversight on other government
+activities. This allows for government officials to behave corruptly
+with respect to the state's resources under the condition that the
+government is providing for the citizens' security. Behavior that would
+otherwise be condemned in peace time will be tolerated under times of
+threat. However, this tolerance of government corruption does not extend
+to corruption in society. Private citizens who behave corruptly in
+society are seen as undermining the common good through seeking personal
+gains in a critical time of threat. Citizens under territorial threat
+will condemn corruption in society as a social behavior but will condone
+it as a political behavior for their government.
+
+This manuscript suggests rethinking how scholars gauge individual-level
+attitudes toward corruption. Not all forms of corruption are the same
+nor are all attitudes toward corruption equivalent. Individuals can
+observe corruption and tolerate its presence and can extend this
+tolerance to some people and not others. However, our most common way of
+approaching this issue of corruption tolerance is the standard ten-point
+survey item on the justifiability of bribe-taking given by the World
+Values Survey. This gives only a cursory probe of attitudes toward
+corruption. Latinobarómetro provides a unique data source to test the
+full implications of my argument. Future installments of cross-national
+survey data should dig deeper on attitudes toward corruption.
+
+Beyond promoting a refinement of the extant political science literature
+on corruption, the analyses presented here have some important
+implications for the literature on territorial conflict. That
+individuals tolerate government corruption but condemn private
+corruption conforms well with the Hutchison (2011) argument that
+territorial threat allows governments to mobilize and shape public
+opinion and behavior in accordance with the government's preferences.
+Thus, the government is able to communicate to citizens that it needs
+the necessary liberties in order to work toward national defense and to
+behave corruptly with respect to other aspects of the budget. This same
+cue from the government is likely to induce greater political
+participation, as Hutchison does find, because the government
+communicates that everyone must do their part in order to achieve the
+common good. This process then leads individuals to be intolerant of
+corrupt behavior among themselves that can be seen as undermining that
+goal.
+
+\section{References}\label{references}
+
+\setlength{\parindent}{-0.2in} \setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt} \vspace*{-0.2in} \noindent
+
+\hypertarget{refs}{}
+\hypertarget{ref-acemoglurobinson2006eodd}{}
+Acemoglu, Daron, and James A. Robinson. 2006. \emph{Economic Origins of
+Dictatorship and Democracy}. New York, NY: Cambridge University Press.
+
+\hypertarget{ref-argandona2003ppc}{}
+Argandona, Antonio. 2003. ``Private-to-Private Corruption.''
+\emph{Journal of Business Ethics} 47 (3): 253--67.
+
+\hypertarget{ref-beckmaher1986cbb}{}
+Beck, Paul J., and Michael W. Maher. 1986. ``A Comparison of Bribery and
+Bidding in Thin Markets.'' \emph{Economics Letters} 20 (1): 1--5.
+
+\hypertarget{ref-boix2003dr}{}
+Boix, Carles. 2003. \emph{Democracy and Redistribution}. New York, NY:
+Cambridge University Press.
+
+\hypertarget{ref-brunettiweder2003fpbn}{}
+Brunetti, Aymo, and Beatrice Weder. 2003. ``A Free Press Is Bad News for
+Corruption.'' \emph{Journal of Public Economics} 87: 1801--24.
+
+\hypertarget{ref-bdmetal2003lps}{}
+Bueno de Mesquita, Bruce, Alastair Smith, Randolph M. Siverson, and
+James D. Morrow. 2003. \emph{The Logic of Political Survival}.
+Cambridge, MA: MIT Press.
+
+\hypertarget{ref-bdm2007psp}{}
+Bueno de Mesquita, Ethan. 2007. ``Politics and the Suboptimal Provision
+of Counterterror.'' \emph{International Organization} 61 (1): 9--36.
+
+\hypertarget{ref-canacheallison2005ppc}{}
+Canache, Damarys, and Michael E. Allison. 2005. ``Perceptions of
+Political Corruption in Latin American Democracies.'' \emph{Latin
+American Politics and Society} 47 (3): 91--111.
+
+\hypertarget{ref-caputo2005dla}{}
+Caputo, Dante. 2005. \emph{Democracy in Latin America: Toward a
+Citizens' Democracy}. Edited by Richard Jones. Buenos Aires: Aguilar,
+Altea, Taurus, Alfaguara, S.A.
+
+\hypertarget{ref-changchu2006ct}{}
+Chang, Eric C.C., and Yun-han Chu. 2006. ``Corruption and Trust:
+Exceptionalism in Asian Democracies?'' \emph{Journal of Politics} 68
+(2): 259--71.
+
+\hypertarget{ref-changkerr2009dvh}{}
+Chang, Eric C.C., and Nicholas N. Kerr. 2009. ``Do Voters Have Different
+Attitudes Toward Corruption? The Sources and Implications of Popular
+Perceptions and Tolerance of Political Corruption.'' \emph{Afrobarometer
+Working Paper No. 116}.
+
+\hypertarget{ref-dellaporta2000scbg}{}
+Della Porta, Donatella. 2000. ``Social Capital, Beliefs in Government,
+and Political Corruption.'' In \emph{Disaffected Democracies: What's
+Troubling the Trilateral Countries}, 202--29. Princeton, NJ: Princeton
+University Press.
+
+\hypertarget{ref-dongaetal2012cc}{}
+Donga, Bin, Uwe Dulleckb, and Benno Torgler. 2012. ``Conditional
+Corruption.'' \emph{Journal of Economic Psychology} 33 (3): 609--27.
+
+\hypertarget{ref-gattietal2003iatc}{}
+Gatti, Roberta, Stefano Paternostro, and Jamele Rigolini. 2003.
+``Individual Attitudes Toward Corruption: Do Social Effects Matter?''
+\emph{World Bank Policy Research Working Paper} No. 3122.
+
+\hypertarget{ref-gelman2008sri}{}
+Gelman, Andrew. 2008. ``Scaling Regression Inputs by Dividing by Two
+Standard Deviations.'' \emph{Statistics in Medicine} 27 (15): 2865--73.
+
+\hypertarget{ref-gibler2010oi}{}
+Gibler, Douglas M. 2010. ``Outside-in: The Effects of Territorial Threat
+on State Centralization.'' \emph{Journal of Conflict Resolution} 54 (4):
+519--42.
+
+\hypertarget{ref-gibler2012tp}{}
+---------. 2012. \emph{The Territorial Peace: Borders, State
+Development, and International Conflict}. New York, NY: Cambridge
+University Press.
+
+\hypertarget{ref-gibleretal2016amid}{}
+Gibler, Douglas M., Steven V. Miller, and Erin K. Little. 2016. ``An
+Analysis of the Militarized Interstate Dispute (MID) Dataset,
+1816-2001.'' \emph{International Studies Quarterly} 60 (4): 719--30.
+
+\hypertarget{ref-goelsaunoris2016mbed}{}
+Goel, Rajeev K., and James W. Saunoris. 2016. ``Military Buildups,
+Economic Development, and Corruption.'' \emph{The Manchester School} 84
+(6): 697--722.
+
+\hypertarget{ref-goeletal2015psb}{}
+Goel, Rajeev K., Jelena Budak, and Edo Rajh. 2015. ``Private Sector
+Bribery and Effectiveness of Anti-Corruption Policies.'' \emph{Applied
+Economic Letters} 22 (10): 759--66.
+
+\hypertarget{ref-heidenheimer2002ppc}{}
+Heidenheimer, Arnold J. 2002. ``Perspectives on the Perception of
+Corruption.'' In \emph{Political Corruption: Concepts and Contexts},
+141--54. New Brunswick, NJ: Transaction Publishers.
+
+\hypertarget{ref-huntington1968pocs}{}
+Huntington, Samuel P. 1968. \emph{Political Order in Changing
+Societies}. New Haven, CT: Yale University Press.
+
+\hypertarget{ref-hutchison2011ttm}{}
+Hutchison, Marc L. 2011. ``Territorial Threats, Mobilization, and
+Political Participation in Africa.'' \emph{Conflict Management and Peace
+Science} 28 (3): 183--208.
+
+\hypertarget{ref-hutchisongibler2007ptt}{}
+Hutchison, Marc L., and Douglas M. Gibler. 2007. ``Political Tolerance
+and Territorial Threat: A Cross-National Study.'' \emph{Journal of
+Politics} 69 (1): 128--42.
+
+\hypertarget{ref-katzaetal1994frmd}{}
+Katza, Roger C., Jennifer Santmana, and Pamela Loneroa. 1994. ``Findings
+on the Revised Morally Debatable Behaviors Scale.'' \emph{Journal of
+Psychology} 128 (1): 15--21.
+
+\hypertarget{ref-kingetal2000mmsa}{}
+King, Gary, Michael Tomz, and Jason Wittenberg. 2000. ``Making the Most
+of Statistical Analyses: Improving Interpretation and Presentation.''
+\emph{American Journal of Political Science} 44 (2). Midwest Political
+Science Association: 347--61.
+
+\hypertarget{ref-knack2007mc}{}
+Knack, Stephen. 2007. ``Measuring Corruption: A Critique of Indicators
+in Eastern Europe and Central Asia.'' \emph{Journal of Public Policy} 27
+(3): 255--91.
+
+\hypertarget{ref-kramer2005agw}{}
+Kramer, Andrew E. 2005. ``Amid Growing Wealth, Nepotism and Nationalism
+in Kazakhstan.'' \emph{New York Times} December 23.
+
+\hypertarget{ref-krueger1974pers}{}
+Krueger, Anne. 1974. ``The Political Economy of the Rent-Seeking
+Society.'' \emph{American Economic Review} 64: 291--303.
+
+\hypertarget{ref-leys1989pch}{}
+Leys, Colin. 1989. ``What Is the Problem About Corruption?'' In
+\emph{Political Corruption: A Handbook}, edited by Arnold J.
+Heidenheimer, Michael Johnston, and Victor T. LeVine. New Brunswick, NJ:
+Transaction Publishers.
+
+\hypertarget{ref-lillis2010ckh}{}
+Lillis, Joanna. 2010. ``Citizens in Kazakhstan Are High on Nazarbayev,
+Tepid on Democratization.'' \emph{EurasiaNet} May 26.
+\url{http://www.eurasianet.org/node/61158}.
+
+\hypertarget{ref-manzettiwilson2007wdcg}{}
+Manzetti, Luigi, and Carole J. Wilson. 2007. ``Why Do Corrupt
+Governments Maintain Public Support?'' \emph{Comparative Political
+Studies} 40 (8): 949--70.
+
+\hypertarget{ref-marshallmarshall2017gr}{}
+Marshall, Monty G., and Gabrielle Elzinga-Marshall. 2017. \emph{Global
+Report 2017: Conflict, Governance and State Fragility}. Vienna, VA:
+Center for Systemic Peace.
+
+\hypertarget{ref-mauro1995cg}{}
+Mauro, Paolo. 1995. ``Corruption and Growth.'' \emph{Quarterly Journal
+of Economics} 110 (3): 681--712.
+
+\hypertarget{ref-miller2013tdpi}{}
+Miller, Steven V. 2013. ``Territorial Disputes and the Politics of
+Individual Well-Being.'' \emph{Journal of Peace Research} 50 (6):
+677--90.
+
+\hypertarget{ref-miller2017etst}{}
+---------. 2017a. ``Economic Threats or Societal Turmoil? Understanding
+Preferences for Authoritarian Political Systems.'' \emph{Political
+Behavior} 39 (2): 457--78.
+
+\hypertarget{ref-miller2017ieea}{}
+---------. 2017b. ``Individual-Level Expectations of Executive Authority
+Under Territorial Threat.'' \emph{Conflict Management and Peace Science}
+34 (5): 526--45.
+
+\hypertarget{ref-mishlerrose2001wopt}{}
+Mishler, William, and Richard Rose. 2001. ``What Are the Origins of
+Political Trust? Tresting Institutional and Cultural Theories in
+Post-Communist Societies.'' \emph{Comparative Political Studies} 34 (1):
+30--62.
+
+\hypertarget{ref-morrisklesner2007ct}{}
+Morris, Stephen D., and Joseph L. Klesner. 2007. ``Corruption and Trust:
+Theoretical Considerations and Evidence from Mexico.'' \emph{Comparative
+Political Studies} 43 (10): 1258--85.
+
+\hypertarget{ref-olken2009cpcr}{}
+Olken, Benjamin A. 2009. ``Corruption Perceptions Vs. Corruption
+Reality.'' \emph{Journal of Public Economics} 93 (7-8): 950--64.
+
+\hypertarget{ref-palmeretal2015mid4}{}
+Palmer, Glenn, Vito D'Orazio, Michael Kenwick, and Matthew Lane. 2015.
+``The Mid4 Dataset, 2002--2010: Procedures, Coding Rules and
+Description.'' \emph{Conflict Management and Peace Science} 32 (2):
+222--42.
+
+\hypertarget{ref-pani2011hnv}{}
+Pani, Marco. 2011. ``Hold Your Nose and Vote: Corruption and Public
+Decisions in a Representative Democracy.'' \emph{Public Choice} 148:
+163--96.
+
+\hypertarget{ref-pemsteinetal2010dc}{}
+Pemstein, Daniel, Stephen A. Meserve, and James Melton. 2010.
+``Democratic Compromise: A Latent Variable Analysis of Ten Measures of
+Regime Type.'' \emph{Political Analysis} 18 (4): 426--49.
+
+\hypertarget{ref-roseetal1998da}{}
+Rose, Richard, William Mishler, and Christian Haerpfer. 1998.
+\emph{Democracy and Its Alternatives: Understanding Post-Communist
+Societies}. Baltimore, MD: The Johns Hopkins University Press.
+
+\hypertarget{ref-roseackerman1999thc}{}
+Rose-Ackerman, Susan. 2001. ``Trust, Honesty, and Corruption: Reflection
+on the State-Building Process.'' \emph{European Journal of Sociology} 42
+(1): 27--71.
+
+\hypertarget{ref-schlesingermeier2002vcas}{}
+Schlesinger, Thomas J., and Kenneth J. Meier. 2002. ``Variation in
+Corruption Among the American States.'' In \emph{Political Corruption:
+Concepts and Contexts}, edited by Arnold J. Heidenheimer and Michael
+Johnston, 627--44. New Brunswick, NJ: Transaction Publishers.
+
+\hypertarget{ref-seligson2002icrl}{}
+Seligson, Mitchell A. 2002. ``The Impact of Corruption on Regime
+Legtimacy: A Comparative Study of Four Latin American Countries.''
+\emph{Journal of Politics} 64 (2): 408--33.
+
+\hypertarget{ref-senesevasquez2003uet}{}
+Senese, Paul D., and John A. Vasquez. 2003. ``A Unified Explanation of
+Territorial Conflict: Testing the Impact of Sampling Bias, 1919-1992.''
+\emph{International Studies Quarterly} 47 (2): 275--98.
+
+\hypertarget{ref-sullivanetal1979acpt}{}
+Sullivan, John, George Marcus, and James Pierson. 1979. ``An Alternative
+Conceptualization of Political Tolerance: Illusory Increases,
+1950s-1970s.'' \emph{American Political Science Review} 73 (3): 781--94.
+
+\hypertarget{ref-swamyetal2001gc}{}
+Swamy, Anand, Stephen Knack, Young Lee, and Omar Azfar. 2001. ``Gender
+and Corruption.'' \emph{Journal of Development Economics} 64: 25--55.
+
+\hypertarget{ref-tir2010td}{}
+Tir, Jaroslav. 2010. ``Territorial Diversion: Diversionary Theory of War
+and Territorial Conflict.'' \emph{Journal of Politics} 72 (2): 413--25.
+
+\hypertarget{ref-vasquez2009twp}{}
+Vasquez, John A. 2009. \emph{The War Puzzle Revisited}. New York, NY:
+Cambridge University Press.
+
+\hypertarget{ref-williams1999nco}{}
+Williams, Robert. 1999. ``New Concepts for Old?'' \emph{Third World
+Quarterly} 20 (3): 503--13.
+
+\hypertarget{ref-wimmeretal2009epac}{}
+Wimmer, Andreas, Lars-Erick Cederman, and Brian Min. 2009. ``Ethnic
+Politics and Armed Conflict: A Configurational Analysis of a New Global
+Data Set.'' \emph{American Sociological Review} 74 (2): 316--37.
+
+
+
+
+\newpage
+\singlespacing 
+\end{document}

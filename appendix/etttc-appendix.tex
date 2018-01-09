@@ -1,0 +1,262 @@
+\documentclass[11pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[sc, osf]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+\renewcommand*\thetable{A.\arabic{table}}
+\renewcommand*\thefigure{A.\arabic{figure}}
+
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{longtable,booktabs}
+
+
+\title{Economic Threats or Societal Turmoil? Understanding Preferences for
+Authoritarian Political Systems: Supplemental Appendix  }
+
+
+
+
+
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+             pdfkeywords = {},  
+            pdftitle={Economic Threats or Societal Turmoil? Understanding Preferences for
+Authoritarian Political Systems: Supplemental Appendix},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{fontawesome}
+
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%%\renewcommand*{\thepage}{A--\arabic{page}}
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\hfill 
+
+}
+
+}
+
+
+
+
+
+
+\vskip 6.5pt
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\noindent \doublespacing \newpage
+
+\hypertarget{descriptive-statistics}{%
+\section{Descriptive Statistics}\label{descriptive-statistics}}
+
+\hypertarget{descriptive-statistics-1}{%
+\subsubsection{Descriptive Statistics}\label{descriptive-statistics-1}}
+
+Table \ref{tab:summarygb} provides descriptive statistics of the
+variables used in the Globalbarometer analysis (i.e.~Model 1). Table
+\ref{tab:summarylb} provides descriptive statistics of the variables
+used in the Latinobarómetro analysis (i.e.~Model 2 and Model 3). Table
+\ref{tab:summarywvs} provides descriptive statistics of the variables
+used in the World Values Survey analysis. Do note all values are ``raw''
+and that the non-binary independent variables are scaled by two standard
+deviations in the analyses in the manuscript.
+
+\begin{table}[!htbp] \centering 
+  \caption{Summary Statistics for Variables in the Globalbarometer Analysis} 
+  \label{tab:summarygb} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+Corruption is Most Important Problem & 48,840 & 0.075 & 0.263 & 0 & 1 \\ 
+Age & 48,840 & 38.426 & 15.423 & 16 & 85 \\ 
+Female & 48,840 & 0.505 & 0.500 & 0 & 1 \\ 
+College Educated & 48,840 & 0.074 & 0.262 & 0 & 1 \\ 
+Personal Economic Situation & 48,840 & $-$0.143 & 1.012 & $-$2 & 2 \\ 
+Unemployed & 48,840 & 0.046 & 0.209 & 0 & 1 \\ 
+Trust Most People & 48,840 & 0.198 & 0.399 & 0 & 1 \\ 
+Targeted Territorial MID & 48,840 & 0.280 & 0.449 & 0 & 1 \\ 
+Initiated Territorial MID & 48,840 & 0.199 & 0.399 & 0 & 1 \\ 
+Targeted Non-Territorial MID & 48,840 & 0.294 & 0.455 & 0 & 1 \\ 
+Initiated Non-Territorial MID & 48,840 & 0.179 & 0.384 & 0 & 1 \\ 
+Economic Threat Index & 48,840 & 0.007 & 0.228 & $-$0.455 & 0.388 \\ 
+Level of Democracy & 48,840 & 0.406 & 0.463 & $-$0.776 & 1.560 \\ 
+\% of Parliament Held by Women & 48,840 & 15.551 & 9.058 & 1.500 & 35.100 \\ 
+Press Freedom & 48,840 & 44.403 & 14.352 & 19 & 79 \\ 
+Ethnic Fractionalization & 48,840 & 0.492 & 0.300 & 0.015 & 0.925 \\ 
+State Fragility Index & 48,840 & 10.372 & 5.032 & 0 & 20 \\ 
+Government Expenditure (\% of GDP) & 48,840 & 13.267 & 3.796 & 5.465 & 20.639 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Summary Statistics for Variables in the Latinobarometro Analysis} 
+  \label{tab:summarylb} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+Tolerance of Private Corruption & 17,736 & 0.166 & 0.372 & 0 & 1 \\ 
+Tolerance of Government Corruption & 16,679 & 0.591 & 0.492 & 0 & 1 \\ 
+Age & 18,508 & 38.725 & 16.064 & 16 & 99 \\ 
+Female & 18,508 & 0.516 & 0.500 & 0 & 1 \\ 
+College Educated & 18,508 & 0.052 & 0.222 & 0 & 1 \\ 
+Unemployed & 18,508 & 0.088 & 0.283 & 0 & 1 \\ 
+Personal Economic Situation & 18,508 & 0.241 & 0.963 & $-$2 & 2 \\ 
+Trust Most People & 17,794 & 0.196 & 0.397 & 0 & 1 \\ 
+Targeted Territorial MID & 18,508 & 0.294 & 0.456 & 0 & 1 \\ 
+Initiated Territorial MID & 18,508 & 0.348 & 0.476 & 0 & 1 \\ 
+Targeted Non-Territorial MID & 18,508 & 0.249 & 0.432 & 0 & 1 \\ 
+Initiated Non-Territorial MID & 18,508 & 0.185 & 0.388 & 0 & 1 \\ 
+Economic Threat Index & 18,508 & $-$0.108 & 0.293 & $-$0.597 & 0.605 \\ 
+Level of Democracy & 18,508 & 0.679 & 0.320 & 0.168 & 1.557 \\ 
+\% of Parliament Held by Women & 18,508 & 14.674 & 7.967 & 2.500 & 35.100 \\ 
+Press Freedom & 18,508 & 40.449 & 13.837 & 14 & 68 \\ 
+Ethnic Fractionalization & 18,508 & 0.281 & 0.206 & 0.060 & 0.678 \\ 
+State Fragility Index & 18,508 & 8.345 & 4.724 & 0 & 16 \\ 
+Government Expenditure (\% of GDP) & 18,508 & 12.887 & 2.865 & 8.745 & 19.810 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+\begin{table}[!htbp] \centering 
+  \caption{Summary Statistics for Variables in the World Values Survey Analysis} 
+  \label{tab:summarywvs} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+Tolerance of Private Corruption & 98,246 & 0.762 & 0.426 & 0 & 1 \\ 
+Age & 98,246 & 40.553 & 16.064 & 15 & 99 \\ 
+Female & 98,246 & 0.513 & 0.500 & 0 & 1 \\ 
+College Educated & 98,246 & 0.133 & 0.339 & 0 & 1 \\ 
+Unemployed & 98,246 & 0.102 & 0.303 & 0 & 1 \\ 
+Personal Economic Situation & 98,246 & 4.657 & 2.572 & 0 & 9 \\ 
+Trust Most People & 98,246 & 0.270 & 0.444 & 0 & 1 \\ 
+Targeted Territorial MID & 98,246 & 0.261 & 0.439 & 0 & 1 \\ 
+Initiated Territorial MID & 98,246 & 0.227 & 0.419 & 0 & 1 \\ 
+Targeted Non-Territorial MID & 98,246 & 0.545 & 0.498 & 0 & 1 \\ 
+Initiated Non-Territorial MID & 98,246 & 0.546 & 0.498 & 0 & 1 \\ 
+Economic Threat Index & 98,246 & $-$0.010 & 0.553 & $-$1.122 & 1.155 \\ 
+Level of Democracy & 98,246 & 0.446 & 0.819 & $-$1.221 & 2.239 \\ 
+\% of Parliament Held by Women & 98,246 & 15.806 & 10.946 & 0.600 & 48.800 \\ 
+Press Freedom & 98,246 & 44.123 & 21.079 & 9 & 84 \\ 
+Ethnic Fractionalization & 98,246 & 0.414 & 0.298 & 0.004 & 0.925 \\ 
+State Fragility Index & 98,246 & 8.387 & 6.347 & 0 & 22 \\ 
+Government Expenditure (\% of GDP) & 98,246 & 14.948 & 4.631 & 5.023 & 25.878 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+
+
+
+\newpage
+\singlespacing 
+\end{document}

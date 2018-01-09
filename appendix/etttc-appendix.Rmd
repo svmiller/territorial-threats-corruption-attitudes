@@ -1,0 +1,151 @@
+---
+title: Economic Threats or Societal Turmoil? Understanding Preferences for Authoritarian Political Systems
+author:
+- name: Steven V. Miller
+  affiliation: Clemson University
+  email: svmille@clemson.edu
+appendix: yes
+appendixletter: A
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: pdflatex
+    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-ms.tex
+    toc: yes
+    toc_depth: 2
+#    citation_package: natbib
+#bibliography: "~/Dropbox/master.bib"
+fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 11pt
+biblio-style: apsr
+subtitle: Supplemental Appendix
+tables: yes
+anonymous: yes
+header-includes:
+- \usepackage{fontawesome}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE, kfigr.prefix=TRUE, kfigr.link=TRUE)
+setwd("~/Dropbox/projects/tolerance-corruption/appendix")
+library(ordinal)
+library(arm)
+library(car)
+# library(papeR)
+library(tidyverse)
+library(countrycode)
+library(WDI)
+library(QuickUDS)
+library(stevemisc)
+library(dotwhisker)
+library(merTools)
+library(stargazer)
+```
+
+```{r loaddata, eval=TRUE, echo=FALSE, cache=TRUE, message=F, warning=F}
+
+Data_GB <- read_csv("~/Dropbox/projects/tolerance-corruption/analysis/data-gb.csv")
+Data_LB <- read_csv("~/Dropbox/projects/tolerance-corruption/analysis/data-lb.csv")
+Data_WVS <- read_csv("~/Dropbox/projects/tolerance-corruption/analysis/data-wvs.csv")
+
+```
+
+\newpage
+
+# Descriptive Statistics
+
+### Descriptive Statistics
+
+Table \ref{tab:summarygb} provides descriptive statistics of the variables used in the Globalbarometer analysis (i.e. Model 1). Table \ref{tab:summarylb} provides descriptive statistics of the variables used in the Latinobarómetro analysis (i.e. Model 2 and Model 3). Table \ref{tab:summarywvs} provides descriptive statistics of the variables used in the World Values Survey analysis. Do note all values are "raw" and that the non-binary independent variables are scaled by two standard deviations in the analyses in the manuscript.
+
+```{r summary_gb, results= "asis", eval=T, echo=F}
+Data_GB %>%
+  select(corruptmip, age:trust, tarterrmid:initnonterrmid, eti, uds, wip, fotp, ethfrac, sfi, govexp) %>%
+  rename(`Corruption is Most Important Problem` = corruptmip,
+         `Age` = age,
+         `Female` = female,
+         `College Educated` = collegeed,
+         `Personal Economic Situation` = personalecon,
+         `Unemployed` = unemployed,
+         `Trust Most People` = trust,
+         `Targeted Territorial MID` = tarterrmid,
+         `Initiated Territorial MID` = initterrmid,
+         `Targeted Non-Territorial MID` = tarnonterrmid,
+         `Initiated Non-Territorial MID` = initnonterrmid,
+         `Economic Threat Index` = eti,
+         `State Fragility Index` = sfi,
+         `Level of Democracy` = uds,
+         `% of Parliament Held by Women` = wip,
+         `Press Freedom` = fotp,
+         `Ethnic Fractionalization` = ethfrac,
+         `Government Expenditure (% of GDP)` = govexp) %>%
+  na.omit() %>% as.data.frame() %>%
+  stargazer(., summary=TRUE, type="latex", header=F,
+            title = "Summary Statistics for Variables in the Globalbarometer Analysis",
+            label="tab:summarygb")
+```
+
+
+
+
+```{r summary_lb, results= "asis", eval=T, echo=F}
+Data_LB %>%
+  select(bribejd, tolgovcord, age:trust, tarterrmid:initnonterrmid, eti, uds, wip, fotp, ethfrac, sfi, govexp) %>%
+  rename(`Tolerance of Private Corruption` = bribejd,
+         `Tolerance of Government Corruption` = tolgovcord,
+         `Age` = age,
+         `Female` = female,
+         `College Educated` = collegeed,
+         `Personal Economic Situation` = socialclass,
+         `Unemployed` = unemployed,
+         `Trust Most People` = trust,
+         `Targeted Territorial MID` = tarterrmid,
+         `Initiated Territorial MID` = initterrmid,
+         `Targeted Non-Territorial MID` = tarnonterrmid,
+         `Initiated Non-Territorial MID` = initnonterrmid,
+         `Economic Threat Index` = eti,
+         `State Fragility Index` = sfi,
+         `Level of Democracy` = uds,
+         `% of Parliament Held by Women` = wip,
+         `Press Freedom` = fotp,
+         `Ethnic Fractionalization` = ethfrac,
+         `Government Expenditure (% of GDP)` = govexp) %>%
+  as.data.frame() %>%
+  stargazer(., summary=TRUE, type="latex", header=F,
+            title = "Summary Statistics for Variables in the Latinobarometro Analysis",
+            label="tab:summarylb")
+```
+
+
+
+```{r summary_wvs, results= "asis", eval=T, echo=F}
+Data_WVS %>%
+  select(bribejd, age:trust, tarterrmid:initnonterrmid, 
+         eti, uds, wip, fotp, ethfrac, sfi, govexp) %>%
+  rename(`Tolerance of Private Corruption` = bribejd,
+         `Age` = age,
+         `Female` = female,
+         `College Educated` = collegeed,
+         `Personal Economic Situation` = satisf,
+         `Unemployed` = unemployed,
+         `Trust Most People` = trust,
+         `Targeted Territorial MID` = tarterrmid,
+         `Initiated Territorial MID` = initterrmid,
+         `Targeted Non-Territorial MID` = tarnonterrmid,
+         `Initiated Non-Territorial MID` = initnonterrmid,
+         `Economic Threat Index` = eti,
+         `State Fragility Index` = sfi,
+         `Level of Democracy` = uds,
+         `% of Parliament Held by Women` = wip,
+         `Press Freedom` = fotp,
+         `Ethnic Fractionalization` = ethfrac,
+         `Government Expenditure (% of GDP)` = govexp) %>%
+  na.omit() %>%
+  as.data.frame() %>%
+  stargazer(., summary=TRUE, type="latex", header=F,
+            title = "Summary Statistics for Variables in the World Values Survey Analysis",
+            label="tab:summarywvs")
+```
+
